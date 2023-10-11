@@ -64,6 +64,7 @@ function refreshCart() {
     const li = document.createElement("li");
     li.classList.add("d-flex");
     li.classList.add("my-2");
+    li.classList.add("align-items-center");
     li.innerHTML = `<p class="flex-grow-1 me-5">${book.asin},${book.title} </p><a href="#" class="btn btn-primary" id="rm-from-cart-${book.asin}">Rimuovi</a>`;
     carrello.appendChild(li);
     document
