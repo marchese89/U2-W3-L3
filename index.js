@@ -63,6 +63,7 @@ function refreshCart() {
   cart.forEach((book) => {
     const li = document.createElement("li");
     li.classList.add("d-flex");
+    li.classList.add("my-2");
     li.innerHTML = `<p class="flex-grow-1 me-5">${book.asin},${book.title} </p><a href="#" class="btn btn-primary" id="rm-from-cart-${book.asin}">Rimuovi</a>`;
     carrello.appendChild(li);
     document
@@ -93,13 +94,13 @@ class Card {
     return `
     
             <img src="${this.image}" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">${this.title}</h5>
-              <p class="card-text">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fs-6">${this.title}</h5>
+              <p class="card-text flex-grow-1">
                 Prezzo: ${this.price} &euro;
               </p>
               <a href="#" class="btn btn-primary" id="discard-${this.asin}">Scarta</a>
-              <a href="#" class="btn btn-info" id="buy-${this.asin}">Compra Ora</a>
+              <a href="#" class="btn btn-info mt-2" id="buy-${this.asin}">Compra Ora</a>
             </div>
           
     `;
