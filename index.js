@@ -29,8 +29,9 @@ fetch("https://striveschool-api.herokuapp.com/books")
       document
         .getElementById(`discard-${book.asin}`)
         .addEventListener("click", function (e) {
-          e.target.parentElement.parentElement.parentElement.style.display =
-            "none";
+          //e.target.parentElement.parentElement.parentElement.remove();
+          //style.display = "none";
+          e.target.closest(".col-4").remove(); //versione alternativa ma non va...
         });
       //codice per aggiungere al carrello
       document
